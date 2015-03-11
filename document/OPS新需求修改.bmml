@@ -1,0 +1,63 @@
+<mockup version="1.0" skin="sketch" measuredW="625" measuredH="426" mockupW="615" mockupH="401">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TabBar" x="176" y="25" w="449" h="401" measuredW="449" measuredH="100" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Artwork%20Approval%2C%20Shipment%20Sample%2C%20Quality%20Contorl</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="188" y="62" w="422" h="55" measuredW="298" measuredH="55" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Operation%2C%20Sales%2C%20Department%2C%20Supplier...%0ASave%7CUpload%2C%20admin%2C%20Hardware%2C%20%u5DE5%u5382</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Arrow" x="253" y="109" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <leftArrow>false</leftArrow>
+        <text>%u70B9%u51FBUpload%uFF0C%u5F39%u51FA%u4E00%u4E2A%u4E0A%u4F20%u8868%u683C</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="__group__" x="237" y="209" w="326" h="197" measuredW="326" measuredH="197" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="__group__" x="1" y="0" w="325" h="197" measuredW="325" measuredH="197" zOrder="0" locked="false" isInGroup="11">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="325" h="197" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="0">
+              <controlProperties>
+                <bottomheight>0</bottomheight>
+                <close>true</close>
+                <dragger>false</dragger>
+                <text>Upload</text>
+                <topheight>26</topheight>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::ButtonBar" x="201" y="25" w="-1" h="-1" measuredW="124" measuredH="28" zOrder="1" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>Upload%2C%20Del</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="0" y="51" w="325" h="55" measuredW="277" measuredH="55" zOrder="2" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>Filename%2C%20Size%28K%29%2C%20Uploader%2C%20Time%0A%2C%202094%2C%20admin%2C%202013-03-20</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="16" y="78" w="-1" h="-1" measuredW="47" measuredH="22" zOrder="3" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>XXX.pdf</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Arrow" x="119" y="197" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::StickyNote" x="10" y="123" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%u70B9%u51FB%u53EF%u4E0B%u8F7D</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

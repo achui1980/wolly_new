@@ -1,0 +1,9 @@
+classes
+.settings
+*.class
+.externalToolBuilders
+*.bak
+lib
+.myeclipse
+CVS
+*.exe
