@@ -35,6 +35,7 @@ import net.sf.jasperreports.view.JRViewer;
 /**
  * @author Teodor Danciu (teodord@users.sourceforge.net)
  * @version $Id: JRViewerSimple.java,v 1.1.1.1 2010/11/02 04:45:05 zy Exp $
+ * achui_1980
  */
 public class JRViewerSimple extends JRViewer
 {
