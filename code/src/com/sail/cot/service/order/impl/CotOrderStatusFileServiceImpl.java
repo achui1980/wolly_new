@@ -12,18 +12,14 @@ import java.util.Map;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
-import org.directwebremoting.WebContext;
 
 import com.jason.core.exception.DAOException;
 import com.sail.cot.dao.CotBaseDao;
-import com.sail.cot.domain.CotOrder;
-import com.sail.cot.domain.CotOrderFac;
 import com.sail.cot.domain.CotOrderRemark;
 import com.sail.cot.domain.CotOrderstatusFile;
 import com.sail.cot.query.QueryInfo;
 import com.sail.cot.service.order.CotOrderStatusFileService;
 import com.sail.cot.util.ContextUtil;
-import com.sun.org.apache.commons.digester.ExtendedBaseRules;
 
 /**
  * <p>Title: 旗航外贸管理软件V8.0</p>
