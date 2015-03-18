@@ -53,6 +53,7 @@ public class VPurchaseOrder implements java.io.Serializable {
 	private Double commisionScale;
 	
 	private String typeEnName;
+	private String companyName;
 	
 	//写入PDF用
 	private String approvalCommentsample;
@@ -782,5 +783,13 @@ public class VPurchaseOrder implements java.io.Serializable {
 
 	public void setSampleOutWash(String sampleOutWash) {
 		this.sampleOutWash = sampleOutWash;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 }

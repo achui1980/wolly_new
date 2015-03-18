@@ -52,7 +52,7 @@ Ext.ux.form.SearchComboxField = Ext.extend(Ext.form.TwinTriggerField, {
 	 * @type Boolean
 	 */
 	autoComplet:false,
-	ref:'searchField',　//
+	ref:'searchField',//
 	validationEvent:false,
     validateOnBlur:false,
     trigger1Class:'x-form-clear-trigger',

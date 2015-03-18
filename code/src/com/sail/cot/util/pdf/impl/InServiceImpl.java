@@ -11,6 +11,7 @@ import org.apache.commons.beanutils.converters.SqlDateConverter;
 
 import com.jason.core.Application;
 import com.sail.cot.dao.CotBaseDao;
+import com.sail.cot.domain.CotCompany;
 import com.sail.cot.domain.CotOrderOut;
 import com.sail.cot.domain.CotOrderOutDel;
 import com.sail.cot.domain.CotOrderOutdetail;
@@ -119,14 +120,32 @@ public class InServiceImpl implements InService {
 	public VInvoice getCotInVO(Integer orderId, boolean isInvoice) {
 		if (orderId == null)
 			return null;
-		VInvoice invoice = null;
+		VInvoice invoice = new VInvoice();
 		if (isInvoice)
 			invoice = (VInvoice) this.getCotBaseDao().getById(VInvoice.class,
 					orderId);
 		else
 			invoice = (VCeditNode) this.getCotBaseDao().getById(
 					VCeditNode.class, orderId);
+		CotCompany company = this.getCompanyInfo(orderId);
+		invoice.setCompanyName("W&C");
+		if(company != null){
+			invoice.setCompanyName(company.getCompanyShortName());
+		}
 		return invoice;
+	}
+
+	@Override
+	public CotCompany getCompanyInfo(Integer orderId) {
+		CotOrderOut cotOrderOut = (CotOrderOut)this.getCotBaseDao().getById(CotOrderOut.class,
+				orderId);
+		Integer companyId = 1;
+		if(cotOrderOut.getCompanyId() != null){
+			companyId = cotOrderOut.getCompanyId();
+		}
+		CotCompany company = (CotCompany)this.getCotBaseDao().getById(CotCompany.class,
+				companyId);
+		return company;
 	}
 
 }

@@ -133,7 +133,7 @@ public class PIPdf {
 		cell.setRowspan(isAgent?9:8);
 		cell.setBorder(0);
 		table.addCell(cell);
-		cell = new PdfPCell(new Paragraph("W&C Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
+		cell = new PdfPCell(new Paragraph(vpInvoice.getCompanyName()+" Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
 		cell.setBorder(0);
 		table.addCell(cell);
 		cell = new PdfPCell(new Paragraph(vpInvoice.getBusinessPerson()+vpInvoice.getOrderNo(),new Font(FontFamily.UNDEFINED, 8, Font.UNDEFINED, null)));

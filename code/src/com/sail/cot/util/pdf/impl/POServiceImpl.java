@@ -6,11 +6,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.collections.CollectionUtils;
-
 import com.jason.core.Application;
 import com.sail.cot.dao.CotBaseDao;
+import com.sail.cot.domain.CotCompany;
 import com.sail.cot.domain.CotGivenType;
+import com.sail.cot.domain.CotOrderFac;
 import com.sail.cot.domain.CotOrderFacdetail;
 import com.sail.cot.domain.CotOrderFacdetailCopy;
 import com.sail.cot.domain.VPurchaseOrder;
@@ -78,6 +78,11 @@ public class POServiceImpl implements POService{
 		if(orderId==null)
 			return null;
 		VPurchaseOrder pOrder = (VPurchaseOrder) this.getCotBaseDao().getById(VPurchaseOrder.class, orderId);
+		CotCompany company = this.getCompanyInfo(orderId);
+		pOrder.setCompanyName("W&C");
+		if(company != null){
+			pOrder.setCompanyName(company.getCompanyShortName());
+		}
 		return pOrder;
 	}
 
@@ -88,6 +93,18 @@ public class POServiceImpl implements POService{
 		String hql = "from CotOrderFacdetailCopy c where c.orderId = ? order by c.sortNo";
 		List<CotOrderFacdetailCopy> orderCopyList = this.getCotBaseDao().queryForLists(hql, new Object[]{orderId});
 		return orderCopyList;
+	}
+
+	@Override
+	public CotCompany getCompanyInfo(Integer orderId) {
+		CotOrderFac cotOrder = (CotOrderFac)this.getCotBaseDao().getById(CotOrderFac.class, orderId);
+		Integer companyId = 1;
+		if(cotOrder.getCompanyId() != null){
+			companyId = cotOrder.getCompanyId();
+		}
+		CotCompany company = (CotCompany)this.getCotBaseDao().getById(CotCompany.class,
+				companyId);
+		return company;
 	}
 	
 }

@@ -49,7 +49,7 @@ public class VInvoice implements java.io.Serializable {
 	private Double commisionScale;
 	private Integer orderStatus;
 	private Integer taxLv;//是否需要加税 1.需要
-	
+	private String companyName;
 	private String typeEnName;
 
 	// Constructors
@@ -450,6 +450,14 @@ public class VInvoice implements java.io.Serializable {
 
 	public void setTypeEnName(String typeEnName) {
 		this.typeEnName = typeEnName;
+	}
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
 
 }

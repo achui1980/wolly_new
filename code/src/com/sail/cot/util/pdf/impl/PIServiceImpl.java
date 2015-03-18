@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.jason.core.Application;
 import com.sail.cot.dao.CotBaseDao;
+import com.sail.cot.domain.CotCompany;
 import com.sail.cot.domain.CotCustContact;
 import com.sail.cot.domain.CotOrder;
 import com.sail.cot.domain.CotOrderDetail;
@@ -39,9 +40,27 @@ public class PIServiceImpl implements PIService{
 				pInvoice.setContact(contact.getContactPerson());
 			}
 		}
+		CotCompany company = this.getCompanyInfo(orderId);
+		pInvoice.setCompanyName("W&C");
+		if(company != null){
+			pInvoice.setCompanyName(company.getCompanyShortName());
+		}
 		return pInvoice;
 		
 	}
+
+	@Override
+	public CotCompany getCompanyInfo(Integer orderId) {
+		CotOrder cotOrder = (CotOrder)this.getCotBaseDao().getById(CotOrder.class, orderId);
+		Integer companyId = 1;
+		if(cotOrder.getCompanyId() != null){
+			companyId = cotOrder.getCompanyId();
+		}
+		CotCompany company = (CotCompany)this.getCotBaseDao().getById(CotCompany.class,
+				companyId);
+		return company;
+	}
+	
 	
 	
 }

@@ -2,6 +2,7 @@ package com.sail.cot.util.pdf;
 
 import java.util.List;
 
+import com.sail.cot.domain.CotCompany;
 import com.sail.cot.domain.CotOrderFacdetail;
 import com.sail.cot.domain.CotOrderFacdetailCopy;
 import com.sail.cot.domain.VPurchaseOrder;
@@ -12,4 +13,5 @@ public interface POService {
 	public List<CotOrderFacdetail> getDetailList(Integer orderId);
 	public List<CotOrderFacdetailCopy> getDetailCopyList(Integer orderId);
 	public List<CotArtWordVO> getArtWordList(Integer orderId);
+	public CotCompany getCompanyInfo(Integer orderId);
 }

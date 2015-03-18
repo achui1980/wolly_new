@@ -132,7 +132,7 @@ public class ArtWordPdf {
 		cell.setRowspan(isAgent ? 9 : 8);
 		cell.setBorder(0);
 		table.addCell(cell);
-		cell = new PdfPCell(new Paragraph("W&C Order No.", new Font(
+		cell = new PdfPCell(new Paragraph(vpOrder.getCompanyName()+" Order No.", new Font(
 				FontFamily.UNDEFINED, 8, Font.BOLD, null)));
 		cell.setBorder(0);
 		table.addCell(cell);

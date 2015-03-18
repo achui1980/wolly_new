@@ -121,7 +121,7 @@ public class SSAPdf {
 		cell.setRowspan(isAgent?8:7);
 		cell.setBorder(0);
 		table.addCell(cell);
-		cell = new PdfPCell(new Paragraph("W&C Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
+		cell = new PdfPCell(new Paragraph(vpOrder.getCompanyName()+" Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
 		cell.setBorder(0);
 		table.addCell(cell);
 		cell = new PdfPCell(new Paragraph(vpOrder.getBusinessPerson()+vpOrder.getOrderNo(),new Font(FontFamily.UNDEFINED, 8, Font.UNDEFINED, null)));

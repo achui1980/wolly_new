@@ -42,7 +42,7 @@ public class VProformaInvoice implements java.io.Serializable {
 	private String destination;
 	private String typeEnName;
 	private String contact;
-
+	private String companyName;
 	// Constructors
 
 	public String getContact() {
@@ -356,4 +356,11 @@ public class VProformaInvoice implements java.io.Serializable {
 		this.typeEnName = typeEnName;
 	}
 
+	public String getCompanyName() {
+		return companyName;
+	}
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 }

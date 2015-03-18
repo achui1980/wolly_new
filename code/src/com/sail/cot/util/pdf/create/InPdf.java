@@ -166,7 +166,7 @@ public class InPdf {
 		cell.setBorder(0);
 		table.addCell(cell);
 		
-		cell = new PdfPCell(new Paragraph("W&C Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
+		cell = new PdfPCell(new Paragraph(vInvoice.getCompanyName()+" Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
 		cell.setBorder(0);
 		table.addCell(cell);
 		cell = new PdfPCell(new Paragraph(vInvoice.getBusinessPerson()+vInvoice.getOrderNo(),new Font(FontFamily.UNDEFINED, 8, Font.UNDEFINED, null)));
