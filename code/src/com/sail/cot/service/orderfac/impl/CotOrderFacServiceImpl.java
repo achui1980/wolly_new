@@ -4645,7 +4645,7 @@ public class CotOrderFacServiceImpl implements CotOrderFacService {
 			
 			// Develiy date - 70
 			Calendar cal70 = Calendar.getInstance();
-			cal70.setTime(cotOrder.getOrderLcDate());
+			cal70.setTime(cotOrder.getSendTime());
 			int k = cal70.get(Calendar.DATE);
 			cal70.set(Calendar.DATE, k -70 );
 
