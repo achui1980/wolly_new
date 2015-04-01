@@ -128,7 +128,7 @@ public class POPdf {
 		cell.setRowspan(isAgent?9:8);
 		cell.setBorder(0);
 		table.addCell(cell);
-		cell = new PdfPCell(new Paragraph(vpOrder.getCompanyName()+" Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
+		cell = new PdfPCell(new Paragraph("W&C"+" Order No.",new Font(FontFamily.UNDEFINED, 8, Font.BOLD, null)));
 		cell.setBorder(0);
 		table.addCell(cell);
 		cell = new PdfPCell(new Paragraph(vpOrder.getBusinessPerson()+vpOrder.getOrderNo(),new Font(FontFamily.UNDEFINED, 8, Font.UNDEFINED, null)));
@@ -217,6 +217,7 @@ public class POPdf {
 		PdfPCell defaultCell = table.getDefaultCell();
 		table.setWidthPercentage(100);
 		table.setHeaderRows(1);
+		table.setSplitRows(false);
 		defaultCell.setPaddingBottom(5);
 		defaultCell.setBorder(0); // 无边框
 		defaultCell.setBackgroundColor(new BaseColor(240,240,240));
