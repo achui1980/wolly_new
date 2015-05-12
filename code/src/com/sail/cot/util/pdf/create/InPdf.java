@@ -30,6 +30,7 @@ import com.sail.cot.domain.CotEmps;
 import com.sail.cot.domain.CotOrderOutdetail;
 import com.sail.cot.domain.VCeditNode;
 import com.sail.cot.domain.VInvoice;
+import com.sail.cot.util.ContextUtil;
 import com.sail.cot.util.RMB;
 import com.sail.cot.util.SystemUtil;
 import com.sail.cot.util.pdf.util.PDFUtil;
@@ -313,7 +314,7 @@ public class InPdf {
 			else 
 				table.addCell(new Paragraph(RMB.getPrecision(detail.getBoxCount(), 0),font));
 			table.addCell(new Paragraph((detail.getEleUnit() == null?"":detail.getEleUnit()),font));
-			table.addCell(new Paragraph(RMB.getPrecision(detail.getOrderPrice(), 2),font));
+			table.addCell(new Paragraph(ContextUtil.getObjByPrecision(detail.getOrderPrice(), "orderPricePrecision"),font));
 			table.addCell(new Paragraph(RMB.getPrecision(detail.getTotalMoney(), 2),font));
 		}
 		
