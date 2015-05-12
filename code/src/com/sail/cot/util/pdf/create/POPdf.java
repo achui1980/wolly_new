@@ -217,7 +217,7 @@ public class POPdf {
 		PdfPCell defaultCell = table.getDefaultCell();
 		table.setWidthPercentage(100);
 		table.setHeaderRows(1);
-		table.setSplitRows(false);
+		//table.setSplitRows(false);
 		defaultCell.setPaddingBottom(5);
 		defaultCell.setBorder(0); // 无边框
 		defaultCell.setBackgroundColor(new BaseColor(240,240,240));
